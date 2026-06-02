@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jean Victor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Jean Victor</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h2>Contact</h2>
+    <p>Vous avez une question ? Contactez-moi</p>
+</section>
+
+<section class="contact-section">
+    <div class="contact-texte">
+        <h3>Me contacter</h3>
+        <p>Je serais ravi de vous répondre rapidement. N'hésitez pas à m'écrire avec vos questions, demandes de commande ou collaborations.</p>
+        <ul>
+            <li>Réponse rapide</li>
+            <li>Devis personnalisés</li>
+            <li>Commandes sur mesure</li>
+            <li>Disponible pour collaborations</li>
+        </ul>
+    </div>
+
+    <form class="contact-form">
+        <div class="form-groupe">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+        </div>
+
+        <div class="form-groupe">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+
+        <div class="form-groupe">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet" required>
+                <option value="">Sélectionnez un sujet</option>
+                <option value="commande">Commande</option>
+                <option value="question">Question</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+
+        <div class="form-groupe">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+
+    <div class="contact-infos">
+        <h3>Autres moyens de me contacter</h3>
+        <p>
+            <strong>Email :</strong> <a href="mailto:contact@jeanvictor-art.fr">contact@jeanvictor-art.fr</a>
+        </p>
+        <p>
+            <strong>Téléphone :</strong> <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+        </p>
+        <p>
+            <strong>Localisation :</strong> France
+        </p>
+        <p>
+            <strong>Horaires de réponse :</strong> Lundi à vendredi, 9h-18h
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Jean Victor — Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
