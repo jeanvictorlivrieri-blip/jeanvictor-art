@@ -82,11 +82,23 @@ header nav a.active {
     border-radius: 4px;
     margin-top: 20px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 .btn:hover {
     background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.btn-pdf {
+    background-color: #27ae60;
+}
+
+.btn-pdf:hover {
+    background-color: #229954;
 }
 
 /* À propos section */
@@ -146,7 +158,7 @@ header nav a.active {
     display: block;
 }
 
-/* PDF items */
+/* PDF items dans galerie */
 .galerie-item .pdf-link {
     text-decoration: none;
     color: inherit;
@@ -176,6 +188,121 @@ header nav a.active {
     font-size: 0.9em;
     color: #888;
     margin: 0 15px 15px 15px;
+}
+
+/* BOUTIQUE STYLES */
+
+/* Section catégories */
+.section-category {
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.section-category:last-of-type {
+    border-bottom: none;
+}
+
+.section-category h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.category-desc {
+    text-align: center;
+    color: #888;
+    font-size: 1.05em;
+    margin-bottom: 40px;
+}
+
+.boutique-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Produits boutique */
+.produit {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.produit:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.produit img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Produits PDF */
+.produit.pdf-produit {
+    position: relative;
+}
+
+.produit.pdf-produit .pdf-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.produit.pdf-produit .pdf-icon {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+}
+
+.produit h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin: 15px 15px 8px 15px;
+    font-weight: bold;
+}
+
+.produit .technique {
+    font-size: 0.9em;
+    color: #888;
+    margin: 0 15px 10px 15px;
+    font-style: italic;
+}
+
+.produit .prix {
+    font-size: 1.3em;
+    color: #e67e22;
+    font-weight: bold;
+    margin: 10px 15px;
+}
+
+.produit .btn {
+    margin: 0 15px 15px 15px;
+    display: block;
+    text-align: center;
+    width: calc(100% - 30px);
 }
 
 /* Footer */
@@ -223,6 +350,24 @@ footer p {
     .hero h2 {
         font-size: 1.8em;
     }
+
+    .boutique-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .section-category h2 {
+        font-size: 1.5em;
+    }
+
+    .produit img,
+    .produit.pdf-produit .pdf-icon {
+        height: 200px;
+    }
+
+    .produit.pdf-produit .pdf-icon {
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -235,11 +380,23 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .boutique-grid {
+        grid-template-columns: 1fr;
+    }
+
     .page-title h2 {
         font-size: 1.5em;
     }
 
     .galerie-item p {
         font-size: 1em;
+    }
+
+    .section-category h2 {
+        font-size: 1.3em;
+    }
+
+    .produit h3 {
+        font-size: 1.1em;
     }
 }
