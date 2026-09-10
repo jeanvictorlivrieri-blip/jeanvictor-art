@@ -8,7 +8,10 @@ header {
 
 header h1 {
     margin: 0 0 15px 0;
-    font-size: 2em;
+    font-size: 3.5em;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 header nav {
@@ -321,7 +324,7 @@ footer p {
 /* Responsive design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     header nav {
